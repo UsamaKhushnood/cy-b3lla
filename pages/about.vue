@@ -364,13 +364,13 @@
             />
             <img
               src="@/assets/images/about/sec5.png"
-              class="sec2Img nftImage"
+              class="sec5Img nftImage"
               alt="Belle Hadid"
             />
 
             <img
               src="@/assets/images/about/sec5Avatar2.png"
-              class="sec2Img sec5Avatar"
+              class="sec5Avatar"
               alt="Belle Hadid"
             />
           </v-col>
@@ -675,6 +675,61 @@ img.sec7Img {
     &.bullet-red {
       background: #e63b3b;
     }
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .heading {
+    font-size: 50px !important;
+    line-height: 50px !important;
+  }
+  .nftInfoPanel {
+    position: absolute;
+    left: -20px;
+    top: 60px;
+    .infoBoxSquared.infoBox {
+      background: #fff;
+      padding: 10px;
+      border: 1px solid #999;
+      border-right: 0;
+      width: 192px;
+      border-bottom: 0;
+    }
+    .infoBox.infoBoxSec {
+      border: 1px solid #999;
+      padding: 25px;
+      background: #fff;
+      width: 266px;
+      position: absolute;
+      left: -23px;
+    }
+  }
+  .nftImage {
+    min-width: 400px !important;
+    max-width: 400px !important;
+    margin-left: auto;
+  }
+  .sec5Img {
+    min-width: 400px !important;
+    max-width: 400px !important;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  img.sec7Img {
+    position: absolute;
+    width: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    left: 0;
+    z-index: 8;
+  }
+  .sec5Nfts .sec5Avatar {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: 250px;
   }
 }
 </style>

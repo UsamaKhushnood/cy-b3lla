@@ -36,7 +36,7 @@
                         <h1>JUN.01.2022</h1>
                       </div>
                     </v-col>
-                    <v-col cols="12" md="4">
+                    <v-col cols="12" md="4" class="ticket-details">
                       <p class="mb-0">Name: BELLA HADID</p>
                       <p class="mb-0">FROM: NYC</p>
                       <p class="mb-0">To: TOKYO</p>
@@ -172,5 +172,14 @@
   //     font-size: 20px;
   //     padding: 10px;
   //   }
+}
+
+@media screen and (max-width: 1336px) {
+  .ticket-details {
+    p {
+      white-space: nowrap;
+      font-size: 15px;
+    }
+  }
 }
 </style>

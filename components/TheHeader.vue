@@ -8,7 +8,7 @@
           to="/"
           tag="div"
         >
-          <img src="@/assets/logo.png" width="300px" alt="Site Logo" />
+          <img src="@/assets/logo.png" class="websiteLogo" alt="Site Logo" />
         </NuxtLink>
         <NuxtLink
           v-else
@@ -97,7 +97,6 @@ export default {
     text-transform: uppercase;
     color: #000 !important;
     padding: 0 10px;
-
     text-decoration: navajowhite;
     transition: 0.1s all ease-in-out;
     &:not(.nuxt-link-active):hover {
@@ -117,6 +116,21 @@ a.navbar-link.nuxt-link-active {
     left: 50%;
     transform: translate(-50%);
     font-size: 40px;
+  }
+}
+
+.websiteLogo {
+  width: 300px;
+}
+
+@media screen and (max-width: 1336px) {
+  .websiteLogo {
+    width: 200px;
+  }
+  .header-links {
+    .navbar-link {
+      padding: 0 5px;
+    }
   }
 }
 </style>

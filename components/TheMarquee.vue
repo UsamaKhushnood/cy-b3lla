@@ -19,9 +19,7 @@
       </div>
     </div>
     <div class="register-sec">
-      <NuxtLink to="/" class="regiesterBtn py-5" tag="v-btn">
-        Regiester
-      </NuxtLink>
+      <NuxtLink to="/" class="regiesterBtn" tag="v-btn"> Register </NuxtLink>
     </div>
   </div>
 </template>
