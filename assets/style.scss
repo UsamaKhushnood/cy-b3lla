@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap');
 
-$font-family: 'Kdam Thmor Pro', sans-serif;
-$body-font-family: 'Kdam Thmor Pro', sans-serif !important;
+// $font-family: 'Kdam Thmor Pro', sans-serif;
+$font-family: 'Quantico', sans-serif;
+$body-font-family: 'Quantico', sans-serif !important;
 .v-application {
   font-family: $font-family !important;
   [class*='text-'] {
@@ -11,4 +13,8 @@ $body-font-family: 'Kdam Thmor Pro', sans-serif !important;
 
 .decoration-none {
   text-decoration: none;
+}
+
+.postion-relative {
+  position: relative;
 }
