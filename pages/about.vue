@@ -4,7 +4,7 @@
       <v-row justify="center" align="center" class="py-10">
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">About</h1>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               A collection of 11,111 NFTs spread across 10 real-world regions.
               CY-B3LLA is a digital revolution that seeks a revival of human
@@ -43,7 +43,6 @@
               :max="4"
               step="1"
               ticks="always"
-              readonly
               tick-size="4"
               color="black"
               class="slider mt-10"
@@ -67,7 +66,7 @@
             GEO-BASED <br />
             TRAITS
           </h1>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               CY-BELLA is the first NFT collection that focuses its design based
               on the 10 countries that it represents.
@@ -158,7 +157,7 @@
       <v-row class="sec3 py-10">
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">TOKYO</h1>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               Each location will hold inspiration from the country’s pop culture
               and culture, to which a local artist will add his/her own ‘touch’
@@ -385,7 +384,7 @@
               UNIQUE TRAITS <br />
               / LIGHTING
             </h1>
-            <div style="width: 550px">
+            <div class="paragraphWrapper">
               <p class="white--text">
                 CY-B3LLA is the first NFT collection to fully embrace the
                 concept of lighting. Lighting brings the beauty of multi-faceted
@@ -510,6 +509,10 @@ export default {
 .heading {
   font-size: 75px;
   line-height: 75px;
+}
+
+.paragraphWrapper {
+  width: 500px;
 }
 
 .v-slider__ticks-container--always-show .v-slider__tick {
@@ -678,58 +681,111 @@ img.sec7Img {
   }
 }
 
-@media screen and (max-width: 1336px) {
+@media (max-width: 1790px) {
   .heading {
     font-size: 50px !important;
     line-height: 50px !important;
   }
+
+  .paragraphWrapper {
+    width: 450px;
+  }
+
   .nftInfoPanel {
     position: absolute;
-    left: -20px;
+    left: 0;
     top: 60px;
+
     .infoBoxSquared.infoBox {
-      background: #fff;
       padding: 10px;
-      border: 1px solid #999;
-      border-right: 0;
       width: 192px;
-      border-bottom: 0;
+      font-size: 14px;
     }
     .infoBox.infoBoxSec {
-      border: 1px solid #999;
-      padding: 25px;
-      background: #fff;
       width: 266px;
-      position: absolute;
       left: -23px;
     }
   }
   .nftImage {
-    min-width: 400px !important;
+    min-width: 420px !important;
     max-width: 400px !important;
     margin-left: auto;
   }
   .sec5Img {
-    min-width: 400px !important;
-    max-width: 400px !important;
-    height: 400px;
+    min-width: 420px !important;
+    max-width: 420px !important;
+    height: 420px;
     margin-left: auto;
     margin-right: auto;
   }
   img.sec7Img {
-    position: absolute;
-    width: 100%;
     min-width: 300px;
     max-width: 300px;
     left: 0;
-    z-index: 8;
   }
   .sec5Nfts .sec5Avatar {
     width: 200px;
     height: 200px;
-    position: absolute;
-    left: 0;
-    top: 250px;
+    left: 10px;
+    top: 245px;
+    &:nth-last-child(1) {
+      right: 10px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 45px !important;
+    line-height: 45px !important;
+  }
+
+  .paragraphWrapper {
+    width: 350px;
+  }
+
+  .nftInfoPanel {
+    left: -93px;
+    top: 90px;
+    .infoBoxSquared.infoBox {
+      width: 165px;
+      font-size: 14px;
+    }
+    .infoBox.infoBoxSec {
+      padding: 20px;
+      width: 230px;
+      left: -23px;
+    }
+  }
+  .nftImage {
+    min-width: 420px !important;
+    max-width: 400px !important;
+  }
+  .sec5Img {
+    min-width: 420px !important;
+    max-width: 420px !important;
+    height: 420px;
+  }
+
+  .sec5Nfts .sec5Avatar {
+    width: 150px;
+    height: 150px;
+    &:nth-last-child(1) {
+      right: 10px;
+    }
+    &:nth-child(2) {
+      top: 55px;
+    }
+  }
+
+  img.sec7Img {
+    left: 20px;
+    &:nth-child(3) {
+      right: 20px;
+    }
+  }
+  .color-bullets {
+    bottom: 100px;
   }
 }
 </style>

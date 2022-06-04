@@ -1,5 +1,5 @@
 <template>
-  <v-container class="mt-10">
+  <v-container class="mt-10 pb-10">
     <h1 class="heading">MENIFESTO</h1>
     <v-row>
       <v-col cols="12">
@@ -12,7 +12,7 @@
       <v-col cols="12" sm="12" md="6">
         <div class="d-flex align-start">
           <v-icon x-large color="black" class="mr-5">mdi-plus</v-icon>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               CY-B3LLA is more than a brand. It is a community reborn. A
               community built for positive change.
@@ -39,7 +39,7 @@
       <v-col cols="12" sm="12" md="6">
         <div class="d-flex align-start">
           <v-icon x-large color="black" class="mr-5">mdi-plus</v-icon>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               CY-B3LLA is the revival of the human connection, reborn via web3.
             </p>

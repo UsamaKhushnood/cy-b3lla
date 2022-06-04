@@ -7,7 +7,7 @@
             BELLA <br />
             HADID
           </h1>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               Bella Hadid is an American supermodel and human rights advocate
               with over 50 million Instagram followers. Representing IMG models,
@@ -37,7 +37,7 @@
       <v-row justify="center" align="center" class="py-10">
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">BELLA’S 3D SCAN</h1>
-          <div style="width: 500px">
+          <div class="paragraphWrapper">
             <p>
               Here you can see an example of the rendered 3D scan created by a
               group of designers who are experts in their field (some have

@@ -1,6 +1,6 @@
 <template>
   <div class="activation">
-    <v-container class="mt-10">
+    <v-container class="mt-10 pb-10">
       <v-row align="center" justify="center">
         <v-col cols="12" md="4" sm="12">
           <h1 class="heading">ACTIVATION</h1>
@@ -78,6 +78,7 @@
       <v-row class="mt-10">
         <v-col cols="12" md="3" sm="12">
           <div class="activation-card">
+            <div class="color-gradient red"></div>
             <h1 class="activationSerial">01.</h1>
             <p class="activationDescription">
               Access to the Private Members Club: Exclusive gatherings and
@@ -92,6 +93,7 @@
         </v-col>
         <v-col cols="12" md="3" sm="12">
           <div class="activation-card">
+            <div class="color-gradient yellow"></div>
             <h1 class="activationSerial">02.</h1>
             <p class="activationDescription">
               CY-B3LLA will allow holders to experience highly exclusive legacy
@@ -104,15 +106,17 @@
         </v-col>
         <v-col cols="12" md="3" sm="12">
           <div class="activation-card">
+            <div class="color-gradient purple"></div>
             <h1 class="activationSerial">03.</h1>
-            <h1 class="activationDesctiption">
+            <h1 class="activationDescription">
               Exclusive CY-B3LLA DAO Brand Creation.
             </h1>
           </div>
         </v-col>
         <v-col cols="12" md="3" sm="12">
           <div class="activation-card">
-            <h1 class="activationSerial">01.</h1>
+            <div class="color-gradient blue"></div>
+            <h1 class="activationSerial">04.</h1>
             <p class="activationDescription">
               Entry pass to global treasure hunts with Bella Hadid in reBASE
               App.
@@ -165,13 +169,87 @@
   h1.input {
     border-bottom: 3px solid black;
   }
-  //   .sidebar {
-  //     background: black;
-  //     color: #fff;
-  //     text-align: center;
-  //     font-size: 20px;
-  //     padding: 10px;
-  //   }
+}
+
+.activation-card {
+  position: relative;
+  padding: 20px;
+  &:after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 240px;
+    background: #000;
+    top: 40px;
+    left: 0;
+  }
+  h1.activationSerial {
+    font-size: 50px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      min-width: 235px;
+      height: 2px;
+      background: #000;
+      bottom: 0;
+      left: -18px;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 53px;
+      background: #000;
+      top: 20px;
+      left: 200px;
+    }
+  }
+  .activationDescription {
+    padding-top: 15px;
+  }
+
+  .color-gradient {
+    background: rgb(251, 251, 251);
+    position: absolute;
+    left: 0;
+    width: 220px;
+    height: 45px;
+    top: 50px;
+    &.yellow {
+      background: linear-gradient(
+        180deg,
+        rgba(251, 251, 251, 1) 0%,
+        rgba(255, 255, 255, 1) 15%,
+        rgba(255, 226, 129, 1) 100%
+      );
+    }
+    &.red {
+      background: linear-gradient(
+        180deg,
+        rgba(251, 251, 251, 1) 0%,
+        rgba(255, 255, 255, 1) 15%,
+        rgba(255, 129, 129, 1) 100%
+      );
+    }
+    &.purple {
+      background: linear-gradient(
+        180deg,
+        rgba(251, 251, 251, 1) 0%,
+        rgba(255, 255, 255, 1) 15%,
+        rgba(177, 129, 255, 1) 100%
+      );
+    }
+    &.blue {
+      background: linear-gradient(
+        180deg,
+        rgba(251, 251, 251, 1) 0%,
+        rgba(255, 255, 255, 1) 15%,
+        rgba(114, 163, 255, 1) 100%
+      );
+    }
+  }
 }
 
 @media screen and (max-width: 1336px) {

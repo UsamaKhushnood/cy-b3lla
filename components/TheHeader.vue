@@ -18,7 +18,7 @@
         >
           <img src="@/assets/logo.min.png" alt="Site Logo" />
         </NuxtLink>
-        <div class="header-links ml-auto mr-5">
+        <div class="header-links ml-auto mr-5 mr-sm-0">
           <nuxt-link to="/about" class="navbar-link">About</nuxt-link>
           <nuxt-link to="/bella-hadid" class="navbar-link"
             >BELLA HADID</nuxt-link
