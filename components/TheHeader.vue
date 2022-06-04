@@ -1,56 +1,164 @@
 <template>
-  <div class="the-header" :class="{ headerFixed: scrollPosition > 0 }">
-    <v-container>
-      <div class="d-flex header-container">
-        <NuxtLink
-          v-if="scrollPosition < 5"
-          class="nav-brand sitelogo black--text"
-          to="/"
-          tag="div"
-        >
-          <img src="@/assets/logo.png" class="websiteLogo" alt="Site Logo" />
-        </NuxtLink>
-        <NuxtLink
-          v-else
-          class="nav-brand sitelogo black--text"
-          to="/"
-          tag="div"
-        >
-          <img src="@/assets/logo.min.png" alt="Site Logo" />
-        </NuxtLink>
-        <div class="header-links ml-auto mr-5 mr-sm-0">
-          <nuxt-link to="/about" class="navbar-link">About</nuxt-link>
-          <nuxt-link to="/bella-hadid" class="navbar-link"
-            >BELLA HADID</nuxt-link
+  <div>
+    <v-app-bar
+      app
+      color="transparent"
+      class="the-header"
+      short
+      dense
+      shrink-on-scroll
+      elevation="0"
+    >
+      <div
+        class="header-wrapper glassy-background"
+        :class="{ headerFixed: scrollPosition > 0 }"
+      >
+        <div class="d-flex container header-container align-center">
+          <v-app-bar-nav-icon
+            class="black--text d-sm-flex d-md-none"
+            @click="drawer = !drawer"
+          ></v-app-bar-nav-icon>
+          <NuxtLink
+            v-if="scrollPosition < 5"
+            class="nav-brand sitelogo black--text mx-sm-auto mx-auto mx-md-0"
+            to="/"
+            tag="div"
           >
-          <nuxt-link to="/locations" class="navbar-link">locations</nuxt-link>
-          <nuxt-link to="#" class="navbar-link text--disabled"
-            >gallery</nuxt-link
+            <img src="@/assets/logo.png" class="websiteLogo" alt="Site Logo" />
+          </NuxtLink>
+          <NuxtLink
+            v-else
+            class="nav-brand sitelogo black--text d-flex align-center mx-sm-auto mx-auto mx-md-0"
+            to="/"
+            tag="div"
           >
-          <nuxt-link to="/menifesto" class="navbar-link">menifesto</nuxt-link>
-          <nuxt-link to="/activation" class="navbar-link">activation</nuxt-link>
-          <nuxt-link to="#" class="navbar-link text--disabled"
-            >game on</nuxt-link
+            <img
+              src="@/assets/logo.min.png"
+              class="websiteLogo"
+              alt="Site Logo"
+            />
+          </NuxtLink>
+
+          <div
+            class="header-links ml-auto d-none d-md-block d-sm-none mr-5 mr-sm-0"
           >
-        </div>
-        <div class="social-media-links d-flex align-center ml-10">
-          <a href="#" class="mr-8 decoration-none">
-            <v-icon class="black--text">mdi-twitter</v-icon>
-          </a>
-          <a href="#" class="decoration-none">
-            <v-icon class="black--text">mdi-discord</v-icon>
-          </a>
+            <nuxt-link to="/about" class="navbar-link">About</nuxt-link>
+            <nuxt-link to="/bella-hadid" class="navbar-link"
+              >BELLA HADID</nuxt-link
+            >
+            <nuxt-link to="/locations" class="navbar-link">locations</nuxt-link>
+            <nuxt-link to="#" class="navbar-link text--disabled"
+              >gallery</nuxt-link
+            >
+            <nuxt-link to="/menifesto" class="navbar-link">menifesto</nuxt-link>
+            <nuxt-link to="/activation" class="navbar-link"
+              >activation</nuxt-link
+            >
+            <nuxt-link to="#" class="navbar-link text--disabled"
+              >game on</nuxt-link
+            >
+          </div>
+          <div class="social-media-links d-flex align-center ml-md-10 ml-0">
+            <a href="#" class="mr-3 mr-md-8 decoration-none">
+              <v-icon class="black--text">mdi-twitter</v-icon>
+            </a>
+            <a href="#" class="decoration-none d-flex align-center pt-1">
+              <svg width="24px" height="20px">
+                <use href="@/assets/icon/discord.svg#discord"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
-    </v-container>
+    </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" fixed temporary>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6 text-center">
+            <div class="d-flex justify-space-between">
+              <img src="@/assets/logo.png" width="150px" alt="logo" />
+              <v-icon color="black" @click="drawer = !drawer">mdi-close</v-icon>
+            </div>
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider></v-divider>
+
+      <v-list class="mt-10" dense nav>
+        <NuxtLink to="/about" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >About</v-btn
+          >
+        </NuxtLink>
+        <NuxtLink to="/bella-hadid" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >bella hadid</v-btn
+          >
+        </NuxtLink>
+        <NuxtLink to="/about" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >About</v-btn
+          >
+        </NuxtLink>
+        <NuxtLink to="/locations" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >locations</v-btn
+          >
+        </NuxtLink>
+        <NuxtLink to="/menifesto" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >menifesto</v-btn
+          >
+        </NuxtLink>
+        <NuxtLink to="/activation" tag="v-list-item" link>
+          <v-btn block color="black" class="white--text text-uppercase"
+            >activation</v-btn
+          >
+        </NuxtLink>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-dialog v-model="registrationDialog" width="500">
+      <v-card class="registration-dialog glassy-background">
+        <v-card-title class="text-h5">
+          <v-icon
+            color="black"
+            class="ml-auto mb-5"
+            @click="$store.dispatch('setRegistrationDialog', false)"
+            >mdi-close</v-icon
+          >
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+            type="input"
+            outlined
+            dense
+            background-color="#fff"
+            placeholder="YOUR EMAIL"
+            hide-details
+          ></v-text-field>
+          <v-btn color="black" class="white--text mt-2" block>REGISTER</v-btn>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 <script>
+import { mapState } from 'vuex'
 export default {
   data() {
     return {
       scrollPosition: null,
+      drawer: false,
     }
+  },
+  computed: {
+    ...mapState({
+      registrationDialog: 'registrationDialog',
+    }),
   },
   mounted() {
     window.addEventListener('scroll', this.updateScroll)
@@ -67,17 +175,34 @@ export default {
   cursor: pointer;
 }
 
+.header-wrapper {
+  width: 100%;
+  padding: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.the-header {
+  z-index: 9999;
+  .v-toolbar__content {
+    padding: 0;
+  }
+}
+
 .header-container {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 10px;
+}
+
+.glassy-background {
+  background: rgb(255 255 255 / 66%) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
 }
 
 .headerFixed {
   position: sticky;
   top: 0;
   z-index: 99999;
-  background: #fffc;
-  backdrop-filter: saturate(180%) blur(20px);
+
   .header-container {
     padding: 0;
   }
@@ -95,6 +220,7 @@ export default {
 .header-links {
   .navbar-link {
     text-transform: uppercase;
+    font-size: 16px;
     color: #000 !important;
     padding: 0 10px;
     text-decoration: navajowhite;
@@ -131,6 +257,15 @@ a.navbar-link.nuxt-link-active {
     .navbar-link {
       padding: 0 5px;
     }
+  }
+}
+@media screen and (max-width: 425px) {
+  .header-wrapper {
+    padding: 12px 10px !important;
+  }
+
+  .websiteLogo {
+    width: 150px;
   }
 }
 </style>

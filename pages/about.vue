@@ -1,7 +1,11 @@
 <template>
   <div class="about-page">
     <v-container>
-      <v-row justify="center" align="center" class="py-10">
+      <v-row
+        justify="center"
+        align="center"
+        class="py-10 flex-column-reverse flex-md-row"
+      >
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">About</h1>
           <div class="paragraphWrapper">
@@ -60,7 +64,11 @@
       </v-row>
     </v-container>
     <v-container>
-      <v-row justify="center" align="center" class="sec2 py-10">
+      <v-row
+        justify="center"
+        align="center"
+        class="sec2 py-10 flex-column-reverse flex-md-row"
+      >
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">
             GEO-BASED <br />
@@ -154,7 +162,7 @@
       </v-row>
     </v-container>
     <v-container>
-      <v-row class="sec3 py-10">
+      <v-row class="sec3 py-10 flex-column-reverse flex-md-row">
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <h1 class="heading mb-3">TOKYO</h1>
           <div class="paragraphWrapper">
@@ -237,7 +245,7 @@
         </v-col> </v-row
     ></v-container>
     <v-container>
-      <v-row class="sec4 py-10">
+      <v-row class="sec4 py-10 flex-column-reverse flex-md-row">
         <v-col cols="12" sm="12" md="6" class="pa-10">
           <div class="tableView">
             <h2 class="pa-3">LOCATION #1 Of 10</h2>
@@ -328,10 +336,10 @@
     ></v-container>
     <div class="grey lighten-3">
       <v-container>
-        <v-row class="sec5 py-10">
+        <v-row class="sec5 py-10 flex-column-reverse flex-md-row">
           <v-col cols="12" sm="12" md="6" class="pa-10">
             <h1 class="heading mb-3">4K 3D DETAILS</h1>
-            <div style="width: 300px">
+            <div style="width: 300px" class="sec7Para">
               <p>
                 Here you can see an example of the rendered 3D scan created by a
                 group of designers who are experts in their field (some have
@@ -378,7 +386,7 @@
     </div>
     <div class="black">
       <v-container>
-        <v-row class="sec6 py-10">
+        <v-row class="sec6 py-10 flex-column-reverse flex-md-row">
           <v-col cols="12" sm="12" md="6" class="pa-10">
             <h1 class="heading mb-3 white--text">
               UNIQUE TRAITS <br />
@@ -425,7 +433,7 @@
           >
             <img
               src="@/assets/images/about/sec6.png"
-              class="sec2Img nftImage"
+              class="sec6Img nftImage"
               alt="Belle Hadid"
             />
           </v-col>
@@ -434,13 +442,13 @@
     </div>
     <div class="grey lighten-5">
       <v-container>
-        <v-row class="sec7 py-10">
+        <v-row class="sec7 py-10 flex-column-reverse flex-md-row">
           <v-col cols="12" sm="12" md="6" class="pa-10">
             <h1 class="heading mb-3">
               MONO-COLOUR <br />
               TRAITS
             </h1>
-            <div style="width: 300px">
+            <div style="width: 300px" class="sec7Para">
               <p>
                 There will be special monochrome traits specific for each
                 region. Without all the color, things are more raw.
@@ -461,7 +469,7 @@
             cols="12"
             sm="12"
             md="6"
-            class="pa-5 d-flex justify-center postion-relative sec5Nfts"
+            class="pa-5 d-flex justify-center postion-relative sec7Nfts"
           >
             <img
               src="@/assets/images/about/Group322.png"
@@ -746,7 +754,7 @@ img.sec7Img {
 
   .nftInfoPanel {
     left: -93px;
-    top: 90px;
+    top: 70px;
     .infoBoxSquared.infoBox {
       width: 165px;
       font-size: 14px;
@@ -776,6 +784,72 @@ img.sec7Img {
     &:nth-child(2) {
       top: 55px;
     }
+  }
+
+  img.sec7Img {
+    left: 20px;
+    &:nth-child(3) {
+      right: 20px;
+    }
+  }
+  .color-bullets {
+    bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .paragraphWrapper,
+  .sec7Para {
+    width: 100% !important;
+  }
+
+  .heading {
+    text-align: center;
+    margin-bottom: 30px !important;
+  }
+  .nftInfoPanel {
+    left: 113px;
+
+    .infoBoxSquared.infoBox {
+      width: 165px;
+      font-size: 14px;
+    }
+    .infoBox.infoBoxSec {
+      padding: 20px;
+      width: 230px;
+      left: -23px;
+    }
+  }
+  .nftImage {
+    min-width: 420px !important;
+    max-width: 400px !important;
+    margin-right: 50px;
+  }
+  .sec5Img {
+    margin: auto;
+  }
+
+  .sec7Nfts {
+    min-height: 540px !important;
+  }
+  .sec5Nfts {
+    .sec5Avatar {
+      left: 70px;
+      &:nth-last-child(1) {
+        right: 70px;
+      }
+      &:nth-child(2) {
+        top: 55px;
+      }
+    }
+  }
+
+  .tableView {
+    width: 100%;
+  }
+
+  .sec6Img {
+    margin: auto;
   }
 
   img.sec7Img {

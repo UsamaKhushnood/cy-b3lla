@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <TheHeader />
-    <TheMarquee />
-    <v-main>
+    <v-main id="scrolling-techniques-5 mb-10">
+      <TheMarquee />
       <Nuxt />
     </v-main>
   </v-app>

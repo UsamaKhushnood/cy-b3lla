@@ -18,3 +18,7 @@ $body-font-family: 'Quantico', sans-serif !important;
 .postion-relative {
   position: relative;
 }
+
+.v-app-bar.v-app-bar--fixed {
+  z-index: 9999 !important;
+}

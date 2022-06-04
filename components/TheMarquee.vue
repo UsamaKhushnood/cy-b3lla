@@ -19,7 +19,12 @@
       </div>
     </div>
     <div class="register-sec">
-      <NuxtLink to="/" class="regiesterBtn" tag="v-btn"> Register </NuxtLink>
+      <v-btn
+        class="regiesterBtn"
+        @click="$store.dispatch('setRegistrationDialog', true)"
+      >
+        Register
+      </v-btn>
     </div>
   </div>
 </template>
@@ -76,6 +81,18 @@
   }
   100% {
     left: -100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .the-marquee {
+    flex-direction: column;
+    .marquee-sec {
+      width: 100%;
+    }
+    .register-sec {
+      width: 100%;
+    }
   }
 }
 </style>
