@@ -862,4 +862,62 @@ img.sec7Img {
     bottom: 100px;
   }
 }
+
+@media screen and (max-width: 425px) {
+  img.nftImage {
+    margin-left: auto !important;
+    margin-right: 0;
+    min-width: 250px !important;
+    width: 250px !important;
+  }
+  .nftInfoPanel {
+    left: 25px;
+    top: 36px;
+    .infoBoxSquared.infoBox {
+      width: 130px;
+      font-size: 14px;
+      p {
+        font-size: 12px;
+      }
+    }
+    .infoBox.infoBoxSec {
+      width: 180px;
+      padding: 10px;
+      padding-top: 15px;
+      h5 {
+        font-size: 12px;
+      }
+      .v-progress-linear {
+        height: 15px !important;
+      }
+    }
+  }
+
+  img.sec5Img.nftImage {
+    margin-left: 0 !important;
+
+    height: 250px;
+  }
+  .sec5Nfts .sec5Avatar {
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 30px;
+    &:nth-last-child(1) {
+      right: 30px;
+      top: 20px;
+    }
+  }
+
+  img.sec6Img.nftImage {
+    margin-right: auto;
+  }
+
+  .listView {
+    width: 100%;
+    .list-header {
+      width: 200px;
+    }
+  }
+}
 </style>

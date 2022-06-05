@@ -12,7 +12,7 @@
             </div>
             <div class="ticket-truncate">
               <div class="ticket-body">
-                <div class="d-flex justify-space-between align-start">
+                <div>
                   <v-row>
                     <v-col cols="12">
                       <p>Flight no: CB 2k22</p>
@@ -20,20 +20,20 @@
                     <v-col cols="12" md="8">
                       <div class="inputField">
                         <div class="label">GATE:</div>
-                        <h1 class="input">11</h1>
+                        <h2 class="input">11</h2>
                       </div>
                     </v-col>
                     <v-col cols="12" md="4">
                       <div class="inputField">
                         <div class="label">SEAT:</div>
-                        <h1 class="input">1 C</h1>
+                        <h2 class="input">1 C</h2>
                       </div>
                     </v-col>
                     <v-col cols="12" md="8">
                       <div class="inputField">
                         <div class="label">DEPARTURE time:</div>
-                        <h1 class="input">1:11 PM</h1>
-                        <h1>JUN.01.2022</h1>
+                        <h2 class="input">1:11 PM</h2>
+                        <h2>JUN.01.2022</h2>
                       </div>
                     </v-col>
                     <v-col cols="12" md="4" class="ticket-details">
@@ -44,7 +44,10 @@
                       <p class="mb-0">sequence no: 11,111</p>
                     </v-col>
                   </v-row>
-                  <img src="@/assets/images/activation/qrCode.png" />
+                  <img
+                    class="qrocdeImg"
+                    src="@/assets/images/activation/qrCode.png"
+                  />
                 </div>
               </div>
             </div>
@@ -54,17 +57,17 @@
                   <p>Flight no: CB 2k22</p>
                   <div class="inputField">
                     <div class="label">SEAT:</div>
-                    <h1 class="input">1 C</h1>
+                    <h2 class="input">1 C</h2>
                   </div>
                 </v-col>
                 <v-col cols="12" md="4">
                   <img src="@/assets/images/activation/gb.png" />
                 </v-col>
-                <v-col cols="12">
+                <v-col cols="12" md="8">
                   <div class="inputField">
                     <div class="label">DEPARTURE time:</div>
-                    <h1 class="input">1:11 PM</h1>
-                    <h3 class="mt-10">
+                    <h2 class="input">1:11 PM</h2>
+                    <h3 class="mt-6">
                       <sup>RE</sup>B 4 S 3
                       <sup>&copy; 2022</sup>
                     </h3>
@@ -76,9 +79,9 @@
         </v-col>
       </v-row>
       <v-row class="mt-10">
-        <v-col cols="12" md="3" sm="12">
+        <v-col cols="12" md="3" sm="12" class="mt-10 mt-md-0">
           <div class="activation-card">
-            <div class="color-gradient red"></div>
+            <div class="color-gradient aRed"></div>
             <h1 class="activationSerial">01.</h1>
             <p class="activationDescription">
               Access to the Private Members Club: Exclusive gatherings and
@@ -91,9 +94,9 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="3" sm="12">
+        <v-col cols="12" md="3" sm="12" class="mt-10 mt-md-0">
           <div class="activation-card">
-            <div class="color-gradient yellow"></div>
+            <div class="color-gradient aYellow"></div>
             <h1 class="activationSerial">02.</h1>
             <p class="activationDescription">
               CY-B3LLA will allow holders to experience highly exclusive legacy
@@ -104,18 +107,18 @@
             </p>
           </div>
         </v-col>
-        <v-col cols="12" md="3" sm="12">
+        <v-col cols="12" md="3" sm="12" class="mt-10 mt-md-0">
           <div class="activation-card">
-            <div class="color-gradient purple"></div>
+            <div class="color-gradient aPurple"></div>
             <h1 class="activationSerial">03.</h1>
             <h1 class="activationDescription">
               Exclusive CY-B3LLA DAO Brand Creation.
             </h1>
           </div>
         </v-col>
-        <v-col cols="12" md="3" sm="12">
+        <v-col cols="12" md="3" sm="12" class="mt-10 mt-md-0">
           <div class="activation-card">
-            <div class="color-gradient blue"></div>
+            <div class="color-gradient aBlue"></div>
             <h1 class="activationSerial">04.</h1>
             <p class="activationDescription">
               Entry pass to global treasure hunts with Bella Hadid in reBASE
@@ -130,15 +133,15 @@
 <style lang="scss">
 .ticket {
   display: flex;
-  width: 1025px;
+  width: 800px;
   position: relative;
   .sidebar {
     background: #000;
     color: #fff;
     position: absolute;
-    left: -170px;
-    top: 148px;
-    width: 328px;
+    left: -152px;
+    top: 120px;
+    width: 272px;
     transform: rotate(270deg);
     text-align: center;
     padding: 4px;
@@ -146,7 +149,7 @@
   .ticket-truncate {
     position: relative;
     border: 1px solid #000;
-    padding: 20px;
+    padding: 10px;
     max-height: 328px;
     &:after {
       content: '';
@@ -166,9 +169,20 @@
       border-right: 0;
     }
   }
-  h1.input {
+  h2.input {
     border-bottom: 3px solid black;
   }
+}
+
+.ticket-details p {
+  font-size: 12px;
+}
+
+img.qrocdeImg {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 70px;
 }
 
 .activation-card {
@@ -217,7 +231,7 @@
     width: 220px;
     height: 45px;
     top: 50px;
-    &.yellow {
+    &.aYellow {
       background: linear-gradient(
         180deg,
         rgba(251, 251, 251, 1) 0%,
@@ -225,7 +239,7 @@
         rgba(255, 226, 129, 1) 100%
       );
     }
-    &.red {
+    &.aRed {
       background: linear-gradient(
         180deg,
         rgba(251, 251, 251, 1) 0%,
@@ -233,7 +247,7 @@
         rgba(255, 129, 129, 1) 100%
       );
     }
-    &.purple {
+    &.aPurple {
       background: linear-gradient(
         180deg,
         rgba(251, 251, 251, 1) 0%,
@@ -241,7 +255,7 @@
         rgba(177, 129, 255, 1) 100%
       );
     }
-    &.blue {
+    &.aBlue {
       background: linear-gradient(
         180deg,
         rgba(251, 251, 251, 1) 0%,

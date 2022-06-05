@@ -1,5 +1,5 @@
 <template>
-  <div class="the-marquee d-flex">
+  <div class="the-marquee mt-2 d-flex">
     <div class="marquee-sec black pa-2">
       <div class="marquee-container">
         <div class="marquee">
@@ -84,7 +84,7 @@
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 450px) {
   .the-marquee {
     flex-direction: column;
     .marquee-sec {

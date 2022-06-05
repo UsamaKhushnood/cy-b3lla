@@ -120,7 +120,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-dialog v-model="registrationDialog" width="500">
+    <v-dialog v-model="registrationDialog" width="80%" fullscreen>
       <v-card class="registration-dialog glassy-background">
         <v-card-title class="text-h5">
           <v-icon
@@ -131,16 +131,23 @@
           >
         </v-card-title>
 
-        <v-card-text>
-          <v-text-field
-            type="input"
-            outlined
-            dense
-            background-color="#fff"
-            placeholder="YOUR EMAIL"
-            hide-details
-          ></v-text-field>
-          <v-btn color="black" class="white--text mt-2" block>REGISTER</v-btn>
+        <v-card-text class="dialog-body">
+          <div>
+            <v-text-field
+              type="input"
+              outlined
+              dense
+              background-color="#fff"
+              placeholder="YOUR EMAIL"
+              hide-details
+            ></v-text-field>
+            <v-btn
+              color="black"
+              class="white--text mt-2 pa-7 registerButton"
+              block
+              >REGISTER</v-btn
+            >
+          </div>
         </v-card-text>
       </v-card>
     </v-dialog>
@@ -175,6 +182,20 @@ export default {
   cursor: pointer;
 }
 
+.registerButton {
+  font-size: 50px;
+}
+
+.dialog-body {
+  width: 480px;
+  margin: 0 auto;
+  height: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px !important;
+}
+
 .header-wrapper {
   width: 100%;
   padding: 10px;
@@ -183,7 +204,7 @@ export default {
 }
 
 .the-header {
-  z-index: 9999;
+  z-index: 200;
   .v-toolbar__content {
     padding: 0;
   }
@@ -198,10 +219,14 @@ export default {
   backdrop-filter: saturate(180%) blur(20px) !important;
 }
 
+.registration-dialog {
+  height: 100%;
+}
+
 .headerFixed {
   position: sticky;
   top: 0;
-  z-index: 99999;
+  z-index: 201;
 
   .header-container {
     padding: 0;
@@ -259,13 +284,35 @@ a.navbar-link.nuxt-link-active {
     }
   }
 }
-@media screen and (max-width: 425px) {
+
+@media screen and (max-width: 450px) {
   .header-wrapper {
     padding: 12px 10px !important;
   }
 
   .websiteLogo {
     width: 150px;
+  }
+
+  .v-dialog.v-dialog--active {
+    width: 100% !important;
+    height: 100%;
+    margin: 0;
+    overflow: visible;
+  }
+
+  .dialog-body {
+    width: 80% !important;
+    margin: 0 auto;
+    height: calc(100% - 0px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 50px !important;
+  }
+  .registration-dialog {
+    height: calc(100% + 55px) !important;
+    margin-top: -26px !important;
   }
 }
 </style>
