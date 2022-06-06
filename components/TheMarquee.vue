@@ -32,7 +32,7 @@
 // custom marquee with pure CSS
 .marquee-sec {
   width: calc(100% - 250px);
-  box-shadow: 5px 0px 20px #000000ab;
+  // box-shadow: 5px 0px 20px #000000ab;
   .marquee-container {
     height: 30px;
     overflow: hidden;
