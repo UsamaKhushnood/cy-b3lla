@@ -529,7 +529,13 @@
             md="6"
             class="pa-5 d-flex justify-center postion-relative sec7Nfts"
           >
-            <carousel-3d>
+            <carousel-3d
+              ref="mycarousel"
+              :autoplay="true"
+              :autoplay-timeout="5000"
+              :count="sliderImages.length"
+              start-index="1"
+            >
               <slide v-for="(slide, i) in sliderImages" :key="i" :index="i">
                 <template
                   slot-scope="{ index, isCurrent, leftIndex, rightIndex }"
@@ -547,10 +553,10 @@
                 </template>
               </slide>
             </carousel-3d>
-            <div class="color-bullets" @click="arraymove">
-              <div class="bullet bullet-pink"></div>
-              <div class="bullet bullet-red"></div>
-              <div class="bullet bullet-white"></div>
+            <div class="color-bullets">
+              <div class="bullet bullet-pink" @click="goToSlide(0)"></div>
+              <div class="bullet bullet-red" @click="goToSlide(1)"></div>
+              <div class="bullet bullet-white" @click="goToSlide(2)"></div>
             </div>
           </v-col>
         </v-row>
@@ -578,10 +584,8 @@ export default {
     }
   },
   methods: {
-    arraymove() {
-      const element = this.sliderImages[2]
-      this.sliderImages.splice(2, 1)
-      this.sliderImages.splice(1, 0, element)
+    goToSlide(index) {
+      this.$refs.mycarousel.goSlide(index)
     },
   },
 }
@@ -754,10 +758,14 @@ img.sec7Img {
   position: absolute;
   bottom: 30px;
   .bullet {
+    cursor: pointer;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 2px solid #999;
+    &:hover {
+      border: 2px solid rgb(0, 0, 0);
+    }
     &.bullet-pink {
       background: #ffe3e5;
     }
