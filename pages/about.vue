@@ -472,11 +472,13 @@
             class="pa-5 d-flex justify-center postion-relative sec7Nfts"
           >
             <img
-              src="@/assets/images/about/Group322.png"
+              v-for="(img, index) in sliderImages"
+              :key="index"
+              :src="img.src"
               class="sec7Img"
               alt="Belle Hadid"
             />
-            <img
+            <!-- <img
               src="@/assets/images/about/Group323.png"
               class="sec7Img"
               alt="Belle Hadid"
@@ -486,8 +488,66 @@
               src="@/assets/images/about/Group321.png"
               class="sec7Img"
               alt="Belle Hadid"
-            />
-            <div class="color-bullets">
+            /> -->
+            <div class="color-bullets" @click="arraymove">
+              <div class="bullet bullet-pink"></div>
+              <div class="bullet bullet-red"></div>
+              <div class="bullet bullet-white"></div>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+    <div class="grey lighten-5">
+      <v-container>
+        <v-row class="sec7 py-10 flex-column-reverse flex-md-row">
+          <v-col cols="12" sm="12" md="6" class="pa-10">
+            <h1 class="heading mb-3">
+              MONO-COLOUR <br />
+              TRAITS
+            </h1>
+            <div style="width: 300px" class="sec7Para">
+              <p>
+                There will be special monochrome traits specific for each
+                region. Without all the color, things are more raw.
+              </p>
+              <p>
+                It is able to depict the true beauty of lines, shapes and
+                textures that form the art. This brings out the uniqueness of
+                the CY-B3LLA design.
+              </p>
+              <p>
+                For example for Japan: a whole CY-BELLA will be only in white,
+                Sakura pink and red (as shown below). No other NFT collection
+                has implemented monocolor before!
+              </p>
+            </div>
+          </v-col>
+          <v-col
+            cols="12"
+            sm="12"
+            md="6"
+            class="pa-5 d-flex justify-center postion-relative sec7Nfts"
+          >
+            <carousel-3d>
+              <slide v-for="(slide, i) in sliderImages" :key="i" :index="i">
+                <template
+                  slot-scope="{ index, isCurrent, leftIndex, rightIndex }"
+                >
+                  <img
+                    :data-index="index"
+                    :class="{
+                      current: isCurrent,
+                      onLeft: leftIndex >= 0,
+                      onRight: rightIndex >= 0,
+                    }"
+                    class="sec7Img"
+                    :src="slide.src"
+                  />
+                </template>
+              </slide>
+            </carousel-3d>
+            <div class="color-bullets" @click="arraymove">
               <div class="bullet bullet-pink"></div>
               <div class="bullet bullet-red"></div>
               <div class="bullet bullet-white"></div>
@@ -499,13 +559,30 @@
   </div>
 </template>
 <script>
+import { Carousel3d, Slide } from 'vue-carousel-3d'
 export default {
   name: 'AboutView',
+  components: {
+    Carousel3d,
+    Slide,
+  },
   data() {
     return {
       sliderStep: 2,
       ticksLabels: ['100%', '75%', '50%', '75%', '100%'],
+      sliderImages: [
+        { src: require('@/assets/images/about/Group322.png') },
+        { src: require('@/assets/images/about/Group323.png') },
+        { src: require('@/assets/images/about/Group321.png') },
+      ],
     }
+  },
+  methods: {
+    arraymove() {
+      const element = this.sliderImages[2]
+      this.sliderImages.splice(2, 1)
+      this.sliderImages.splice(1, 0, element)
+    },
   },
 }
 </script>
@@ -657,6 +734,7 @@ img.sec7Img {
   max-width: 400px;
   left: 0;
   z-index: 8;
+
   &:nth-child(2) {
     left: 50%;
     transform: translate(-50%);
@@ -919,5 +997,15 @@ img.sec7Img {
       width: 200px;
     }
   }
+}
+.carousel-3d-container {
+  height: 400px !important;
+}
+
+.carousel-3d-slide {
+  width: 400px !important;
+  height: 400px !important;
+  background: transparent;
+  border: 0px;
 }
 </style>
