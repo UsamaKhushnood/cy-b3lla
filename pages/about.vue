@@ -1033,7 +1033,7 @@ img.sec7Img {
 .carousel-3d-slide {
   width: 400px !important;
   height: 400px !important;
-  background: transparent;
-  border: 0px;
+  background: transparent !important;
+  border: 0px !important;
 }
 </style>
