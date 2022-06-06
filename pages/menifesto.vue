@@ -1,6 +1,6 @@
 <template>
   <v-container class="mt-10 pb-10">
-    <h1 class="heading">MENIFESTO</h1>
+    <h1 class="heading">MANIFESTO</h1>
     <v-row>
       <v-col cols="12">
         <img

@@ -1,11 +1,16 @@
 <template>
-  <div class="activation">
+  <div class="activation mb-10 pb-10">
     <v-container class="mt-10 pb-10">
       <v-row align="center" justify="center">
         <v-col cols="12" md="4" sm="12">
           <h1 class="heading">ACTIVATION</h1>
         </v-col>
-        <v-col cols="12" md="8" sm="12" class="d-flex justify-end">
+        <v-col
+          cols="12"
+          md="8"
+          sm="12"
+          class="d-flex justify-center justify-md-end"
+        >
           <div class="ticket">
             <div class="sidebar">
               <h4>C-B boarding pass</h4>
@@ -17,26 +22,26 @@
                     <v-col cols="12">
                       <p>Flight no: CB 2k22</p>
                     </v-col>
-                    <v-col cols="12" md="8">
+                    <v-col cols="8" md="8">
                       <div class="inputField">
                         <div class="label">GATE:</div>
                         <h2 class="input">11</h2>
                       </div>
                     </v-col>
-                    <v-col cols="12" md="4">
+                    <v-col cols="4" md="4">
                       <div class="inputField">
                         <div class="label">SEAT:</div>
                         <h2 class="input">1 C</h2>
                       </div>
                     </v-col>
-                    <v-col cols="12" md="8">
+                    <v-col cols="8" md="8">
                       <div class="inputField">
                         <div class="label">DEPARTURE time:</div>
                         <h2 class="input">1:11 PM</h2>
                         <h2>JUN.01.2022</h2>
                       </div>
                     </v-col>
-                    <v-col cols="12" md="4" class="ticket-details">
+                    <v-col cols="4" md="4" class="ticket-details pa-0 pa-md-2">
                       <p class="mb-0">Name: BELLA HADID</p>
                       <p class="mb-0">FROM: NYC</p>
                       <p class="mb-0">To: TOKYO</p>
@@ -53,17 +58,17 @@
             </div>
             <div class="ticket-truncate">
               <v-row>
-                <v-col cols="12" md="8">
+                <v-col cols="8" md="8">
                   <p>Flight no: CB 2k22</p>
                   <div class="inputField">
                     <div class="label">SEAT:</div>
                     <h2 class="input">1 C</h2>
                   </div>
                 </v-col>
-                <v-col cols="12" md="4">
+                <v-col cols="4" md="4" class="text-right">
                   <img src="@/assets/images/activation/gb.png" />
                 </v-col>
-                <v-col cols="12" md="8">
+                <v-col cols="8" md="8">
                   <div class="inputField">
                     <div class="label">DEPARTURE time:</div>
                     <h2 class="input">1:11 PM</h2>
@@ -194,11 +199,12 @@ img.qrocdeImg {
     width: 2px;
     height: 240px;
     background: #000;
-    top: 40px;
+    top: 60px;
     left: 0;
   }
   h1.activationSerial {
-    font-size: 50px;
+    font-size: 70px;
+    font-weight: 300;
     position: relative;
     &:before {
       content: '';
@@ -214,9 +220,9 @@ img.qrocdeImg {
       content: '';
       position: absolute;
       width: 2px;
-      height: 53px;
+      height: 64px;
       background: #000;
-      top: 20px;
+      top: 40px;
       left: 200px;
     }
   }
@@ -229,8 +235,8 @@ img.qrocdeImg {
     position: absolute;
     left: 0;
     width: 220px;
-    height: 45px;
-    top: 50px;
+    height: 55px;
+    top: 70px;
     &.aYellow {
       background: linear-gradient(
         180deg,
@@ -270,7 +276,31 @@ img.qrocdeImg {
   .ticket-details {
     p {
       white-space: nowrap;
-      font-size: 15px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .ticket {
+    width: 650px;
+    img.qrocdeImg {
+      width: 55px;
+    }
+  }
+}
+@media screen and (max-width: 425px) {
+  .ticket {
+    width: 350px;
+    flex-direction: column;
+    .sidebar {
+      position: unset;
+      transform: none;
+      width: 100%;
+    }
+    .ticket-details {
+      margin-top: 30px;
+      p {
+        font-size: 10px;
+      }
     }
   }
 }

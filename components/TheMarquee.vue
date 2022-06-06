@@ -1,5 +1,5 @@
 <template>
-  <div class="the-marquee mt-2 d-flex">
+  <div class="the-marquee mt-0 mt-sm-2 d-flex">
     <div class="marquee-sec black pa-2">
       <div class="marquee-container">
         <div class="marquee">

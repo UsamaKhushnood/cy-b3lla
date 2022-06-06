@@ -13,7 +13,9 @@
         class="header-wrapper glassy-background"
         :class="{ headerFixed: scrollPosition > 0 }"
       >
-        <div class="d-flex container header-container align-center">
+        <div
+          class="d-flex container header-container align-center align-lg-stretch align-md-stretch"
+        >
           <v-app-bar-nav-icon
             class="black--text d-sm-flex d-md-none"
             @click="drawer = !drawer"
@@ -48,9 +50,9 @@
             >
             <nuxt-link to="/locations" class="navbar-link">locations</nuxt-link>
             <nuxt-link to="#" class="navbar-link text--disabled"
-              >gallery</nuxt-link
+              >gala</nuxt-link
             >
-            <nuxt-link to="/menifesto" class="navbar-link">menifesto</nuxt-link>
+            <nuxt-link to="/menifesto" class="navbar-link">manifesto</nuxt-link>
             <nuxt-link to="/activation" class="navbar-link"
               >activation</nuxt-link
             >
@@ -88,32 +90,63 @@
 
       <v-list class="mt-10" dense nav>
         <NuxtLink to="/about" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
             >About</v-btn
           >
         </NuxtLink>
         <NuxtLink to="/bella-hadid" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
             >bella hadid</v-btn
           >
         </NuxtLink>
-        <NuxtLink to="/about" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
-            >About</v-btn
+        <NuxtLink to="/gala" tag="v-list-item" link>
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
+            >gala</v-btn
           >
         </NuxtLink>
+
         <NuxtLink to="/locations" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
             >locations</v-btn
           >
         </NuxtLink>
         <NuxtLink to="/menifesto" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
-            >menifesto</v-btn
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
+            >manifesto</v-btn
           >
         </NuxtLink>
         <NuxtLink to="/activation" tag="v-list-item" link>
-          <v-btn block color="black" class="white--text text-uppercase"
+          <v-btn
+            tile
+            elevation="0"
+            block
+            color="black"
+            class="white--text text-uppercase sidebarLinks mb-2"
             >activation</v-btn
           >
         </NuxtLink>
@@ -284,6 +317,13 @@ a.navbar-link.nuxt-link-active {
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  .header-links {
+    .navbar-link {
+      padding: 0;
+    }
+  }
+}
 
 @media screen and (max-width: 450px) {
   .header-wrapper {
@@ -313,6 +353,19 @@ a.navbar-link.nuxt-link-active {
   .registration-dialog {
     height: calc(100% + 55px) !important;
     margin-top: -26px !important;
+  }
+}
+
+.sidebarLinks {
+  &:after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 13px;
+    background: white;
+    right: -7px;
+    top: -5px;
+    transform: rotate(45deg);
   }
 }
 </style>

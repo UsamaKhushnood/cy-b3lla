@@ -6,70 +6,191 @@
         10 LOCATIONS X 1,111 NFTS
       </h1>
 
-      <table class="locations-table mt-5">
-        <tr>
-          <th></th>
-          <th>LOCATION</th>
-          <th>DATE</th>
-          <th>TIME</th>
-          <th>EDITION</th>
-          <th>STATUS</th>
-          <th></th>
-        </tr>
-        <tr v-for="i in 10" :key="i" :class="[i == 1 ? 'revealed' : '']">
-          <td class="text-center">{{ i }}</td>
-          <td>TOKYO</td>
-          <td>20/JUN/2022</td>
-          <td>11:11</td>
-          <td>1,111</td>
-          <td v-if="i == 1">ANNOUNCED / WAITING FOR REVEAL</td>
-          <td v-else>WAITING FOR REVEAL</td>
-          <td class="text-right button">
-            <v-btn color="black" tile class="px-5 white--text">DISCOVER</v-btn>
-          </td>
-        </tr>
-      </table>
+      <div class="loaction-data-table mt-5">
+        <v-data-table
+          dense
+          :headers="headers"
+          :items="items"
+          hide-default-footer
+        >
+          <template #item.sr="{ index }">
+            {{ index + 1 }}
+          </template>
+          <template #item.action>
+            <v-btn block tile color="black" class="white--text">DISCOVER</v-btn>
+          </template>
+        </v-data-table>
+      </div>
     </v-container>
   </div>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      headers: [
+        {
+          text: ' ',
+          align: 'center',
+          filterable: false,
+          sortable: false,
+          value: 'sr',
+        },
+        {
+          text: 'LOCATION',
+          align: 'start',
+          filterable: false,
+          sortable: false,
+          value: 'location',
+        },
+        {
+          text: 'DATE',
+          align: 'start',
+          filterable: false,
+          sortable: false,
+          value: 'date',
+        },
+        {
+          text: 'TIME',
+          align: 'start',
+          filterable: false,
+          sortable: false,
+          value: 'time',
+        },
+        {
+          text: 'EDITION',
+          align: 'start',
+          filterable: false,
+          sortable: false,
+          value: 'edition',
+        },
+        {
+          text: 'STATUS',
+          align: 'start',
+          filterable: false,
+          sortable: false,
+          value: 'status',
+        },
+        {
+          text: ' ',
+          align: 'end px-0',
+          filterable: false,
+          sortable: false,
+          value: 'action',
+        },
+      ],
+      items: [
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'ANNOUNCED / WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'ANNOUNCED / WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'ANNOUNCED / WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'ANNOUNCED / WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+          status: 'ANNOUNCED / WAITING FOR REVEAL',
+          action: 'DISCOVER',
+        },
+        {
+          location: 'Tokyo',
+          date: '20/JUN/2022',
+          time: '11:11',
+          edition: '1,111',
+        },
+      ],
+    }
+  },
+}
+</script>
 <style lang="scss">
 .locations-heading {
   border-bottom: 1px solid black;
   line-height: 35px;
 }
-.locations-table {
-  width: 100%;
-  border-spacing: 5px 5px;
-  th {
-    text-align: left;
-  }
 
+.loaction-data-table table {
   tr {
-    td {
-      &:not(.button) {
-        padding: 0 10px;
-        background: #f4f4f4;
-      }
-      &.button {
-        button {
-          background: grey !important;
-          width: 100%;
-        }
-      }
+    &.revealed td {
+      background: #ffaaaa;
     }
-    &.revealed {
-      td {
-        &:not(.button) {
-          background: #ffaaaa;
-        }
-        &.button {
-          button {
-            background: black !important;
-            width: 100%;
-          }
-        }
-      }
+    &:hover td {
+      background: #ffaaaa;
     }
+  }
+  th span {
+    font-size: 16px;
+    color: #000;
+  }
+  thead > tr:last-child > th {
+    border: 0 !important;
+  }
+  border-spacing: 5px 5px !important;
+  td {
+    background: #f4f4f4;
+    border: 0 !important;
+    font-size: 16px !important;
+    color: #000;
   }
 }
 </style>
