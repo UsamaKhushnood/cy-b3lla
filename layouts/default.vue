@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <custom-cursor
-      :targets="['img', 'a', 'button', 'hover']"
+      :targets="['img', 'a', 'button', 'hover-element']"
       :circle-color="'transparent'"
       :circle-color-hover="'#2f2f2f'"
       :dot-color="'red'"

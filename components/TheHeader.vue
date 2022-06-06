@@ -304,7 +304,7 @@ a.navbar-link.nuxt-link-active {
 }
 
 .websiteLogo {
-  width: 300px;
+  width: 250px;
 }
 
 @media screen and (max-width: 1336px) {
