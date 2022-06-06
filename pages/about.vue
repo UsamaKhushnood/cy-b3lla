@@ -489,7 +489,7 @@
               class="sec7Img"
               alt="Belle Hadid"
             /> -->
-            <div class="color-bullets" @click="arraymove">
+            <div class="color-bullets">
               <div class="bullet bullet-pink"></div>
               <div class="bullet bullet-red"></div>
               <div class="bullet bullet-white"></div>
@@ -553,10 +553,13 @@
                 </template>
               </slide>
             </carousel-3d>
-            <div class="color-bullets">
-              <div class="bullet bullet-pink" @click="goToSlide(0)"></div>
-              <div class="bullet bullet-red" @click="goToSlide(1)"></div>
-              <div class="bullet bullet-white" @click="goToSlide(2)"></div>
+            <div class="color-bullets hover">
+              <div class="bullet hover bullet-pink" @click="goToSlide(0)"></div>
+              <div class="bullet hover bullet-red" @click="goToSlide(1)"></div>
+              <div
+                class="bullet hover bullet-white"
+                @click="goToSlide(2)"
+              ></div>
             </div>
           </v-col>
         </v-row>
@@ -758,7 +761,7 @@ img.sec7Img {
   position: absolute;
   bottom: 30px;
   .bullet {
-    cursor: pointer;
+    // cursor: pointer;
     width: 20px;
     height: 20px;
     border-radius: 50%;

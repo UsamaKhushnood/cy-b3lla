@@ -22,7 +22,7 @@
           ></v-app-bar-nav-icon>
           <NuxtLink
             v-if="scrollPosition < 5"
-            class="nav-brand sitelogo black--text mx-sm-auto mx-auto mx-md-0"
+            class="nav-brand hover sitelogo black--text mx-sm-auto mx-auto mx-md-0"
             to="/"
             tag="div"
           >
@@ -211,9 +211,9 @@ export default {
 }
 </script>
 <style lang="scss">
-.nav-brand {
-  cursor: pointer;
-}
+// .nav-brand {
+//   cursor: pointer;
+// }
 
 .registerButton {
   font-size: 50px;
