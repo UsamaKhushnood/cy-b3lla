@@ -61,10 +61,18 @@
             >
           </div>
           <div class="social-media-links d-flex align-center ml-md-10 ml-0">
-            <a href="#" class="mr-3 mr-md-8 decoration-none">
+            <a
+              href="https://twitter.com/cybellaxyz"
+              class="mr-3 mr-md-8 decoration-none"
+              target="blank"
+            >
               <v-icon class="black--text">mdi-twitter</v-icon>
             </a>
-            <a href="#" class="decoration-none d-flex align-center pt-1">
+            <a
+              href="https://discord.com/invite/cy-bella"
+              class="decoration-none d-flex align-center pt-1"
+              target="blank"
+            >
               <svg width="24px" height="20px">
                 <use href="@/assets/icon/discord.svg#discord"></use>
               </svg>

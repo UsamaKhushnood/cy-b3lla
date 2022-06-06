@@ -444,64 +444,7 @@
           </v-row>
         </v-container>
       </div>
-      <div class="grey lighten-5">
-        <v-container>
-          <v-row class="sec7 py-10 flex-column-reverse flex-md-row">
-            <v-col cols="12" sm="12" md="6" class="pa-10">
-              <h1 class="heading mb-3">
-                MONO-COLOUR <br />
-                TRAITS
-              </h1>
-              <div style="width: 300px" class="sec7Para">
-                <p>
-                  There will be special monochrome traits specific for each
-                  region. Without all the color, things are more raw.
-                </p>
-                <p>
-                  It is able to depict the true beauty of lines, shapes and
-                  textures that form the art. This brings out the uniqueness of
-                  the CY-B3LLA design.
-                </p>
-                <p>
-                  For example for Japan: a whole CY-BELLA will be only in white,
-                  Sakura pink and red (as shown below). No other NFT collection
-                  has implemented monocolor before!
-                </p>
-              </div>
-            </v-col>
-            <v-col
-              cols="12"
-              sm="12"
-              md="6"
-              class="pa-5 d-flex justify-center postion-relative sec7Nfts"
-            >
-              <img
-                v-for="(img, index) in sliderImages"
-                :key="index"
-                :src="img.src"
-                class="sec7Img"
-                alt="Belle Hadid"
-              />
-              <!-- <img
-              src="@/assets/images/about/Group323.png"
-              class="sec7Img"
-              alt="Belle Hadid"
-            />
 
-            <img
-              src="@/assets/images/about/Group321.png"
-              class="sec7Img"
-              alt="Belle Hadid"
-            /> -->
-              <div class="color-bullets">
-                <div class="bullet bullet-pink"></div>
-                <div class="bullet bullet-red"></div>
-                <div class="bullet bullet-white"></div>
-              </div>
-            </v-col>
-          </v-row>
-        </v-container>
-      </div>
       <div class="grey lighten-5">
         <v-container>
           <v-row class="sec7 py-10 flex-column-reverse flex-md-row">
