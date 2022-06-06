@@ -49,9 +49,7 @@
               >BELLA HADID</nuxt-link
             >
             <nuxt-link to="/locations" class="navbar-link">locations</nuxt-link>
-            <nuxt-link to="#" class="navbar-link text--disabled"
-              >gala</nuxt-link
-            >
+            <nuxt-link to="/gala" class="navbar-link">gala</nuxt-link>
             <nuxt-link to="/menifesto" class="navbar-link">manifesto</nuxt-link>
             <nuxt-link to="/activation" class="navbar-link"
               >activation</nuxt-link
