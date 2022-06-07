@@ -331,20 +331,13 @@ a.navbar-link.nuxt-link-active {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media (max-width: 450px) {
   .header-wrapper {
     padding: 12px 10px !important;
   }
 
   .websiteLogo {
     width: 150px;
-  }
-
-  .v-dialog.v-dialog--active {
-    width: 100% !important;
-    height: 100%;
-    margin: 0;
-    overflow: visible;
   }
 
   .dialog-body {
@@ -355,10 +348,6 @@ a.navbar-link.nuxt-link-active {
     flex-direction: column;
     justify-content: center;
     padding-bottom: 50px !important;
-  }
-  .registration-dialog {
-    height: calc(100% + 55px) !important;
-    margin-top: -26px !important;
   }
 }
 
