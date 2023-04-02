@@ -1,4 +1,5 @@
-# cy-b3lla
+# CY-B3LLA
+### NFT website for Bella Hadid
 
 ### Live Preview 
 [Go to CY_B3LLE Live Preivew](https://cy-b3lle.netlify.app/)
