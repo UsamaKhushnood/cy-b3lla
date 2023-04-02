@@ -1,7 +1,7 @@
 # cy-b3lla
 
 ### Live Preview 
-[Go to CY_B3LLE Live Preivew](cy-b3lle.netlify.app/)
+[Go to CY_B3LLE Live Preivew](https://cy-b3lle.netlify.app/)
 
 ## Build Setup
 
